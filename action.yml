@@ -1,0 +1,16 @@
+---
+name: clover-diff-action
+description: Calculate the difference between the two coverage reports
+inputs:
+  filename-base:
+    description: The filename of the XML report with which it is compared
+    required: true
+  filename-relative:
+    description: The filename of the XML report being compared
+    required: true
+outputs:
+  difference:
+    description: Coverage difference between reports
+runs:
+  using: node12
+  main: dist/index.js
