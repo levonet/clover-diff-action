@@ -6,14 +6,14 @@ const metrics0 = {
 }
 
 const metrics1 = {
-    coveredelements: '1277',
-    elements: '7976'
+    coveredelements: '1288',
+    elements: '8000'
 }
 
 test('zero metrics return zero', () => {
     expect(calcCodeCoverage(metrics0)).toBe(0)
 })
 
-test('zero metrics return zero', () => {
-    expect(calcCodeCoverage(metrics1)).toBe(16.010531594784354)
+test('calcule', () => {
+    expect(calcCodeCoverage(metrics1)).toBe(16.1)
 })

@@ -22,9 +22,9 @@ Coverage difference between reports.
 
 ```yaml
 - uses: levonet/clover-diff-action@master
-  id: diff
+  id: clover-diff
   with:
     filename-base: clover-master.xml
     filename-head: clover-branch.xml
-- run: echo ${{ steps.diff.outputs.difference }}
+- run: echo ${{ steps.clover-diff.outputs.difference }}
 ```
