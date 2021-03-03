@@ -25,4 +25,4 @@ jobs:
         filename-base: test/assets/clover.xml
         filename-head: test/assets/clover.xml
     - if: ${{ steps.clover-diff.outputs.difference != 0 }}
-      uses: exit 1
+      run: exit 1
