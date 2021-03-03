@@ -1,5 +1,7 @@
 const core = require('@actions/core')
 const github = require('@actions/github')
+const fs = require('fs')
+const txml = require('txml')
 
 function getCloverMetrics(filename) {
     const xml = fs.readFileSync(filename, {encoding:'utf8', flag:'r'})
