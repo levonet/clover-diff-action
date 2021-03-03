@@ -1,4 +1,5 @@
 # clover-diff-action
+[![test](https://github.com/levonet/clover-diff-action/actions/workflows/test.yml/badge.svg)](https://github.com/levonet/clover-diff-action/actions/workflows/test.yml)
 
 Calculate the difference between the two coverage reports.
 
