@@ -17,23 +17,31 @@ function getCloverMetrics(filename) {
 }
 
 function calcCodeCoverage(metrics) {
-    return (parseInt(metrics.coveredelements, 10) / parseInt(metrics.elements, 10)) * 100
+    const elements = parseInt(metrics.elements, 10)
+
+    if (!elements) {
+        return 0
+    }
+
+    return (parseInt(metrics.coveredelements, 10) / elements) * 100
 }
 
 try {
     const filenameBase = core.getInput('filename-base')
-    const filenameRelative = core.getInput('filename-relative')
+    const filenameHead = core.getInput('filename-head')
 
     const base = getCloverMetrics(filenameBase)
-    const relative = getCloverMetrics(filenameRelative)
+    const head = getCloverMetrics(filenameHead)
+    core.info(`Base metrics: ${JSON.stringify(base)}`)
+    core.info(`Head metrics: ${JSON.stringify(head)}`)
 
     const coverageBase = calcCodeCoverage(base)
-    const coverageRelative = calcCodeCoverage(relative)
+    const coverageHead = calcCodeCoverage(head)
+    core.info(`Base coverage: ${coverageBase}`)
+    core.info(`Head coverage: ${coverageHead}`)
 
-    core.setOutput('difference', coverageRelative - coverageBase)
-
-    const payload = JSON.stringify(github.context.payload, undefined, 2)
-    console.log(`The event payload: ${payload}`)
+    core.setOutput('difference', coverageHead - coverageBase)
+    core.info(`Difference: ${coverageHead - coverageBase}`)
 } catch (error) {
     core.setFailed(error.message)
 }
