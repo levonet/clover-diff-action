@@ -1,39 +1,23 @@
 const core = require('@actions/core')
-const github = require('@actions/github')
-const fs = require('fs')
-const txml = require('txml')
-
-function getCloverMetrics(filename) {
-    const xml = fs.readFileSync(filename, {encoding:'utf8', flag:'r'})
-    const data = txml.parse(xml)
-    const metrics = data.filter((node) => node.tagName === 'coverage')
-        .map((node) => node.children)[0]
-        .filter((node) => node.tagName === 'project')
-        .map((node) => node.children)[0]
-        .filter((node) => node.tagName === 'metrics')
-        [0].attributes
-
-    return metrics
-}
-
-function calcCodeCoverage(metrics) {
-    return (parseInt(metrics.coveredelements, 10) / parseInt(metrics.elements, 10)) * 100
-}
+const getCloverMetrics = require('./lib/clover')
+const calcCodeCoverage = require('./lib/coverage')
 
 try {
     const filenameBase = core.getInput('filename-base')
-    const filenameRelative = core.getInput('filename-relative')
+    const filenameHead = core.getInput('filename-head')
 
     const base = getCloverMetrics(filenameBase)
-    const relative = getCloverMetrics(filenameRelative)
+    const head = getCloverMetrics(filenameHead)
+    core.info(`Base metrics: ${JSON.stringify(base)}`)
+    core.info(`Head metrics: ${JSON.stringify(head)}`)
 
     const coverageBase = calcCodeCoverage(base)
-    const coverageRelative = calcCodeCoverage(relative)
+    const coverageHead = calcCodeCoverage(head)
+    core.info(`Base coverage: ${coverageBase}`)
+    core.info(`Head coverage: ${coverageHead}`)
 
-    core.setOutput('difference', coverageRelative - coverageBase)
-
-    const payload = JSON.stringify(github.context.payload, undefined, 2)
-    console.log(`The event payload: ${payload}`)
+    core.setOutput('difference', coverageHead - coverageBase)
+    core.info(`Difference: ${coverageHead - coverageBase}`)
 } catch (error) {
     core.setFailed(error.message)
 }

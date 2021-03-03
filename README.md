@@ -8,7 +8,7 @@ Calculate the difference between the two coverage reports.
 
 **Required** The filename of the XML report with which it is compared.
 
-### `filename-relative`
+### `filename-head`
 
 **Required** The filename of the XML report being compared.
 
@@ -22,9 +22,9 @@ Coverage difference between reports.
 
 ```yaml
 - uses: levonet/clover-diff-action@master
-  id: diff
+  id: clover-diff
   with:
-    filename-base: clover-head.xml
-    filename-relative: clover-branch.xml
-- run: echo ${{ steps.diff.outputs.difference }}
+    filename-base: clover-master.xml
+    filename-head: clover-branch.xml
+- run: echo ${{ steps.clover-diff.outputs.difference }}
 ```

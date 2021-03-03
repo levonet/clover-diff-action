@@ -1,0 +1,28 @@
+name: test
+
+on:
+  push:
+    branches:
+    - master
+  pull_request:
+
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - run: yarn install
+    - run: yarn run lint
+    - run: yarn test
+
+  action:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: ./
+      id: clover-diff
+      with:
+        filename-base: test/assets/clover.xml
+        filename-head: test/assets/clover.xml
+    - if: ${{ steps.clover-diff.outputs.difference != 0 }}
+      run: exit 1

@@ -5,7 +5,7 @@ inputs:
   filename-base:
     description: The filename of the XML report with which it is compared
     required: true
-  filename-relative:
+  filename-head:
     description: The filename of the XML report being compared
     required: true
 outputs:
