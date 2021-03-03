@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1614365358094" clover="4.4.1">
+   <project name="test-api 0.0.1-SNAPSHOT" timestamp="1614365353289">
+      <metrics coveredelements="1277" complexity="2726" loc="18273" methods="1988" classes="206" statements="4884" packages="54" coveredconditionals="134" coveredmethods="258" elements="7976" ncloc="14503" files="193" conditionals="1104" coveredstatements="885"/>
+   </project>
+   <testproject name="test-api 0.0.1-SNAPSHOT" timestamp="1614365353289">
+      <metrics coveredelements="758" complexity="170" loc="2747" methods="132" classes="28" statements="916" packages="14" coveredconditionals="12" coveredmethods="105" elements="1092" ncloc="2309" files="27" conditionals="44" coveredstatements="641"/>
+   </testproject>
+</coverage>
