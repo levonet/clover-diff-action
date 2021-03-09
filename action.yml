@@ -9,8 +9,34 @@ inputs:
     description: The filename of the XML report being compared
     required: true
 outputs:
-  difference:
+  diff-coverage:
     description: Coverage difference between reports
+  diff-source-elements:
+    description: Difference of source elements
+  diff-source-coveredelements:
+    description: Difference of source covered elements
+  base-coverage:
+    description: Coverage from base file report
+  base-source-elements:
+    description: Code elements of source code from base file report
+  base-source-coveredelements:
+    description: Covered elements of source code from base file report
+  head-coverage:
+    description: Coverage from head file report
+  head-source-elements:
+    description: Code elements of source code from head file report
+  head-source-coveredelements:
+    description: Covered elements of source code from head file report
+  head-test-elements:
+    description: Code elements of tests from head file report
+  head-test-testruns:
+    description: Test runs from head file report
+  head-test-testpasses:
+    description: Test passes from head file report
+  head-test-testfailures:
+    description: Test failures from head file report
+  head-test-testduration:
+    description: Test duration in seconds from head file report
 runs:
   using: node12
   main: dist/index.js
