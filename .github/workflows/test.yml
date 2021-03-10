@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: levonet/clover-diff-action@${{ github.sha }}
+    - uses: levonet/clover-diff-action@${{ github.ref }}
       id: clover-diff
       with:
         filename-base: test/assets/clover.xml
