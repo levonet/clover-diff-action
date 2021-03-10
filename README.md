@@ -19,6 +19,10 @@ Calculate the difference between the two coverage reports.
 
 Coverage difference between reports.
 
+### `diff-coverage-short`
+
+Human readable coverage difference between reports.
+
 ### `diff-source-elements`
 
 Difference of source elements.

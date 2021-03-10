@@ -19,12 +19,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: levonet/clover-diff-action@metric
+    - uses: ./
       id: clover-diff
       with:
         filename-base: test/assets/clover.xml
         filename-head: test/assets/clover.xml
     - if: ${{ steps.clover-diff.outputs.diff-coverage != 0 }}
+      run: exit 1
+    - if: ${{ steps.clover-diff.outputs.diff-coverage-short != 0 }}
       run: exit 1
     - if: ${{ steps.clover-diff.outputs.diff-source-elements != 0 }}
       run: exit 1
@@ -44,11 +46,11 @@ jobs:
       run: exit 1
     - if: ${{ steps.clover-diff.outputs.head-test-elements != 1092 }}
       run: exit 1
-    - if: ${{ steps.clover-diff.outputs.head-test-testruns != 0 }}
+    - if: ${{ steps.clover-diff.outputs.head-test-testruns != 27 }}
       run: exit 1
-    - if: ${{ steps.clover-diff.outputs.head-test-testpasses != 0 }}
+    - if: ${{ steps.clover-diff.outputs.head-test-testpasses != 26 }}
       run: exit 1
-    - if: ${{ steps.clover-diff.outputs.head-test-testfailures != 0 }}
+    - if: ${{ steps.clover-diff.outputs.head-test-testfailures != 1 }}
       run: exit 1
-    - if: ${{ steps.clover-diff.outputs.head-test-testduration != 0 }}
+    - if: ${{ steps.clover-diff.outputs.head-test-testduration != 0.146 }}
       run: exit 1

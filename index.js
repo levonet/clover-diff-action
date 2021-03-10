@@ -39,6 +39,7 @@ try {
     setOutputAndPrint(core, 'head-test-testduration', testsHead.testduration)
 
     setOutputAndPrint(core, 'diff-coverage', coverageHead - coverageBase)
+    setOutputAndPrint(core, 'diff-coverage-short', Math.round((coverageHead - coverageBase) * 1000) / 1000)
     setOutputAndPrint(core, 'diff-source-elements', metricsHead.elements - metricsBase.elements)
     setOutputAndPrint(core, 'diff-source-coveredelements', metricsHead.coveredelements - metricsBase.coveredelements)
 } catch (error) {

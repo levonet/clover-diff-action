@@ -11,6 +11,8 @@ inputs:
 outputs:
   diff-coverage:
     description: Coverage difference between reports
+  diff-coverage-short:
+    description: Human readable coverage difference between reports
   diff-source-elements:
     description: Difference of source elements
   diff-source-coveredelements:
