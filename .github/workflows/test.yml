@@ -30,19 +30,19 @@ jobs:
       run: exit 1
     - if: ${{ steps.clover-diff.outputs.diff-source-coveredelements != 0 }}
       run: exit 1
-    - if: ${{ steps.clover-diff.outputs.base-coverage != 0 }}
+    - if: ${{ steps.clover-diff.outputs.base-coverage != 16.010531594784354 }}
       run: exit 1
-    - if: ${{ steps.clover-diff.outputs.base-source-elements != 0 }}
+    - if: ${{ steps.clover-diff.outputs.base-source-elements != 7976 }}
       run: exit 1
-    - if: ${{ steps.clover-diff.outputs.base-source-coveredelements != 0 }}
+    - if: ${{ steps.clover-diff.outputs.base-source-coveredelements != 1277 }}
       run: exit 1
-    - if: ${{ steps.clover-diff.outputs.head-coverage != 0 }}
+    - if: ${{ steps.clover-diff.outputs.head-coverage != 16.010531594784354 }}
       run: exit 1
-    - if: ${{ steps.clover-diff.outputs.head-source-elements != 0 }}
+    - if: ${{ steps.clover-diff.outputs.head-source-elements != 7976 }}
       run: exit 1
-    - if: ${{ steps.clover-diff.outputs.head-source-coveredelements != 0 }}
+    - if: ${{ steps.clover-diff.outputs.head-source-coveredelements != 1277 }}
       run: exit 1
-    - if: ${{ steps.clover-diff.outputs.head-test-elements != 0 }}
+    - if: ${{ steps.clover-diff.outputs.head-test-elements != 1092 }}
       run: exit 1
     - if: ${{ steps.clover-diff.outputs.head-test-testruns != 0 }}
       run: exit 1
