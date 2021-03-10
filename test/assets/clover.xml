@@ -5,5 +5,47 @@
    </project>
    <testproject name="test-api 0.0.1-SNAPSHOT" timestamp="1614365353289">
       <metrics coveredelements="758" complexity="170" loc="2747" methods="132" classes="28" statements="916" packages="14" coveredconditionals="12" coveredmethods="105" elements="1092" ncloc="2309" files="27" conditionals="44" coveredstatements="641"/>
+      <package name="com.app.obj1">
+         <metrics coveredelements="44" complexity="9" loc="131" methods="9" classes="2" statements="36" coveredconditionals="0" coveredmethods="9" elements="45" ncloc="93" files="2" conditionals="0" coveredstatements="35"/>
+         <file path="/home/runner/work/test/test/src/test/java/com/app/obj1/Class1Test.java" name="Class1Test.java">
+            <metrics coveredelements="31" coveredconditionals="0" complexity="6" loc="85" coveredmethods="6" methods="6" elements="32" classes="1" ncloc="60" statements="26" conditionals="0" coveredstatements="25"/>
+            <class name="Class1Test">
+               <metrics coveredelements="31" complexity="6" methods="6" testruns="5" statements="26" coveredconditionals="0" coveredmethods="6" elements="32" testfailures="0" testduration="0.004" conditionals="0" coveredstatements="25" testpasses="5"/>
+            </class>
+         </file>
+         <file path="/home/runner/work/test/test/src/test/java/com/app/obj1/Class2Test.java" name="Class2Test.java">
+            <metrics coveredelements="13" coveredconditionals="0" complexity="3" loc="46" coveredmethods="3" methods="3" elements="13" classes="1" ncloc="33" statements="10" conditionals="0" coveredstatements="10"/>
+            <class name="Class2Test">
+               <metrics coveredelements="13" complexity="3" methods="3" testruns="2" statements="10" coveredconditionals="0" coveredmethods="3" elements="13" testfailures="0" testduration="0.001" conditionals="0" coveredstatements="10" testpasses="2"/>
+            </class>
+         </file>
+      </package>
+      <package name="com.app.obj2">
+         <metrics coveredelements="214" complexity="52" loc="836" methods="44" classes="4" statements="373" coveredconditionals="0" coveredmethods="32" elements="417" ncloc="725" files="4" conditionals="0" coveredstatements="182"/>
+         <file path="/home/runner/work/test/test/src/test/java/com/app/obj2/Class1Test.java" name="Class1Test.java">
+            <metrics coveredelements="35" coveredconditionals="0" complexity="4" loc="97" coveredmethods="4" methods="4" elements="35" classes="1" ncloc="70" statements="31" conditionals="0" coveredstatements="31"/>
+            <class name="Class1Test">
+               <metrics coveredelements="35" complexity="4" methods="4" testruns="4" statements="31" coveredconditionals="0" coveredmethods="4" elements="35" testfailures="0" testduration="0.004" conditionals="0" coveredstatements="31" testpasses="4"/>
+            </class>
+         </file>
+         <file path="/home/runner/work/test/test/src/test/java/com/app/obj2/Class2Test.java" name="Class2Test.java">
+            <metrics coveredelements="50" coveredconditionals="0" complexity="10" loc="125" coveredmethods="9" methods="10" elements="54" classes="1" ncloc="102" statements="44" conditionals="0" coveredstatements="41"/>
+            <class name="Class2Test">
+               <metrics coveredelements="50" complexity="10" methods="10" testruns="9" statements="44" coveredconditionals="0" coveredmethods="9" elements="54" testfailures="1" testduration="0.069" conditionals="0" coveredstatements="41" testpasses="8"/>
+            </class>
+         </file>
+         <file path="/home/runner/work/test/test/src/test/java/com/app/obj2/Class3Test.java" name="Class3Test.java">
+            <metrics coveredelements="35" coveredconditionals="0" complexity="16" loc="369" coveredmethods="5" methods="16" elements="233" classes="1" ncloc="335" statements="217" conditionals="0" coveredstatements="30"/>
+            <class name="Class3Test">
+               <metrics coveredelements="35" complexity="16" methods="16" testruns="5" statements="217" coveredconditionals="0" coveredmethods="5" elements="233" testfailures="0" testduration="0.035" conditionals="0" coveredstatements="30" testpasses="5"/>
+            </class>
+         </file>
+         <file path="/home/runner/work/test/test/src/test/java/com/app/obj2/Class4Test.java" name="Class4Test.java">
+            <metrics coveredelements="94" coveredconditionals="0" complexity="22" loc="245" coveredmethods="14" methods="14" elements="95" classes="1" ncloc="218" statements="81" conditionals="0" coveredstatements="80"/>
+            <class name="Class4Test">
+               <metrics coveredelements="94" complexity="22" methods="14" testruns="2" statements="81" coveredconditionals="0" coveredmethods="14" elements="95" testfailures="0" testduration="0.033" conditionals="0" coveredstatements="80" testpasses="2"/>
+            </class>
+         </file>
+      </package>
    </testproject>
 </coverage>
