@@ -52,5 +52,5 @@ jobs:
       run: exit 1
     - if: ${{ steps.clover-diff.outputs.head-test-testfailures != 1 }}
       run: exit 1
-    - if: ${{ steps.clover-diff.outputs.head-test-testduration != 0.146 }}
+    - if: ${{ steps.clover-diff.outputs.head-test-testduration != 146 }}
       run: exit 1

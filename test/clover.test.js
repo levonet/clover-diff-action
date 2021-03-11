@@ -25,6 +25,6 @@ test('open file and get test stat', () => {
         testruns: 27,
         testpasses: 26,
         testfailures: 1,
-        testduration: 0.146
+        testduration: 146
     })
 })
