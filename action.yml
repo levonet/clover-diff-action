@@ -38,7 +38,7 @@ outputs:
   head-test-testfailures:
     description: Test failures from head file report
   head-test-testduration:
-    description: Test duration in seconds from head file report
+    description: Test duration in milliseconds (ms) from head file report
 runs:
   using: node12
   main: dist/index.js

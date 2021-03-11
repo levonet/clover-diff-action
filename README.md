@@ -73,7 +73,7 @@ Test failures from head file report.
 
 ### `head-test-testduration`
 
-Test duration in seconds from head file report.
+Test duration in milliseconds (ms) from head file report.
 
 ## Example usage
 
