@@ -20,6 +20,15 @@
             </class>
          </file>
       </package>
+      <package name="com.app.obj0">
+         <metrics coveredelements="0" complexity="0" loc="15" methods="0" classes="1" statements="0" coveredconditionals="0" coveredmethods="0" elements="0" ncloc="9" files="1" conditionals="0" coveredstatements="0"/>
+         <file path="/home/runner/work/test/test/src/test/java/com/app/obj0/Class0Test.java" name="Class0Test.java">
+            <metrics coveredelements="0" coveredconditionals="0" complexity="0" loc="15" coveredmethods="0" methods="0" elements="0" classes="1" ncloc="9" statements="0" conditionals="0" coveredstatements="0"/>
+            <class name="Class0Test">
+               <metrics coveredelements="0" coveredconditionals="0" complexity="0" coveredmethods="0" methods="0" elements="0" statements="0" conditionals="0" coveredstatements="0"/>
+            </class>
+         </file>
+      </package>
       <package name="com.app.obj2">
          <metrics coveredelements="214" complexity="52" loc="836" methods="44" classes="4" statements="373" coveredconditionals="0" coveredmethods="32" elements="417" ncloc="725" files="4" conditionals="0" coveredstatements="182"/>
          <file path="/home/runner/work/test/test/src/test/java/com/app/obj2/Class1Test.java" name="Class1Test.java">
